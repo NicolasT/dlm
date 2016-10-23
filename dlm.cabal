@@ -1,0 +1,28 @@
+Name:                dlm
+Version:             0.1.0.0
+Synopsis:            Haskell bindings for the Linux DLM service (libdlm)
+Description:         Please see README.md
+Homepage:            https://github.com/NicolasT/dlm#readme
+License:             BSD3
+License-File:        LICENSE
+Author:              Nicolas Trangez
+Maintainer:          ikke@nicolast.be
+Copyright:           (c) 2016, Nicolas Trangez
+Category:            Network
+Build-type:          Simple
+Cabal-Version:       >=1.10
+
+Library
+  Hs-Source-Dirs:      src
+  Exposed-Modules:     Network.DLM
+  Other-Modules:       Network.DLM.Bindings
+                     , Network.DLM.Flags
+                     , Network.DLM.Lksb
+                     , Network.DLM.Mode
+  Build-Depends:       base >= 4.9 && < 4.10
+  Default-Language:    Haskell2010
+  Pkgconfig-Depends:   libdlm_lt
+
+source-repository head
+  type:     git
+  location: https://github.com/NicolasT/dlm
